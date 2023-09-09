@@ -6,31 +6,53 @@
 //
 
 import SwiftUI
+import DittoSwift
 
 struct ContentView: View {
     @State private var urlInput: String = ""
-    let websites = [
-        ("Google", "https://www.google.com"),
-        ("Reddit", "https://www.reddit.com")
-    ] // Hardcoded for now
-
+    @ObservedObject var viewModel: ArchiveViewModel
+    
+    
+    let ditto: Ditto
+    var liveQuery: DittoLiveQuery?
+    var subscription: DittoSubscription?
+    
+    
+    init(ditto: Ditto) {
+        self.ditto = ditto
+        self.viewModel = ArchiveViewModel(ditto: ditto)
+    }
+    
     var body: some View {
         VStack {
-            List(websites, id: \.0) { website in
-                NavigationLink(destination: DetailView(website: website)) {
-                    Text(website.0)
+            List {
+                ForEach(viewModel.archives) { archive in
+                    NavigationLink(destination: DetailView(archive: archive)) {
+                        Text(archive.title)
+                    }
                 }
             }
-
+            
             HStack {
                 TextField("Enter URL", text: $urlInput)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                 Button("Archive") {
-                    // Your custom code for archiving
+                    
+                    let archive = Archive(title: urlInput)
+                    do {
+                        try ditto.store["archives"].upsert([
+                            "id": archive.id,
+                            "title": archive.title,
+                        ])
+                    } catch {
+                        print(error.localizedDescription)
+                    }
+                    
+                    urlInput = ""
                 }
             }
             .padding()
         }
-        .navigationTitle("Website List")
+        .navigationTitle("Archives")
     }
 }

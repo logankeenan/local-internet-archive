@@ -9,15 +9,15 @@ import SwiftUI
 import WebKit
 
 struct DetailView: View {
-    let website: (String, String)
+    let archive: Archive
     
     var body: some View {
         VStack {
-            Text(website.0)
+            Text(archive.title)
                 .font(.title)
                 .padding()
             
-            WebView(urlString: website.1)
+            WebView(urlString: "https://logankeenan.com")
         }
     }
 }
