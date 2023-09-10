@@ -10,6 +10,7 @@ import DittoSwift
 struct Archive {
     let _id: String
     let title: String
+    let markup: DittoAttachmentToken? = nil
 
     init(document: DittoDocument) {
         _id = document["_id"].stringValue

@@ -35,8 +35,7 @@ struct ios_local_internet_archiveApp: App {
                 ContentView(ditto: ditto)
                     .onAppear(perform: {
                         do {
-                            try ditto.startSync()
-                            
+                            try ditto.startSync()                            
                         } catch (let err){
                             isPresentingAlert = true
                             errorMessage = err.localizedDescription

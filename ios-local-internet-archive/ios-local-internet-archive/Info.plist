@@ -4,12 +4,12 @@
 <dict>
 	<key>APP_ID</key>
 	<string>$(APP_ID)</string>
-	<key>TOKEN</key>
-	<string>$(TOKEN)</string>
 	<key>NSBonjourServices</key>
 	<array>
 		<string>_http-alt._tcp.</string>
 	</array>
+	<key>TOKEN</key>
+	<string>$(TOKEN)</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>bluetooth-central</string>

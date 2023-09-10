@@ -1,0 +1,13 @@
+[package]
+name = "rust-ios"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["staticlib", "cdylib"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+web-archive = { version = "0.3.0", git="https://github.com/logankeenan/web-archive.git", branch="main" }
+scraper = "0.17.1"

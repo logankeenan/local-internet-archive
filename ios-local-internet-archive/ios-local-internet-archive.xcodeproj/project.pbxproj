@@ -18,6 +18,7 @@
 		0E5045D42AAD028B00838435 /* DittoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0E5045D32AAD028B00838435 /* DittoSwift */; };
 		0E5045D72AAD07E800838435 /* Archive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5045D62AAD07E800838435 /* Archive.swift */; };
 		0E5045D92AAD0E2900838435 /* ArchiveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5045D82AAD0E2900838435 /* ArchiveViewModel.swift */; };
+		0E5045DE2AAD268200838435 /* librust_ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E5045DD2AAD265E00838435 /* librust_ios.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		0E5045D62AAD07E800838435 /* Archive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Archive.swift; sourceTree = "<group>"; };
 		0E5045D82AAD0E2900838435 /* ArchiveViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveViewModel.swift; sourceTree = "<group>"; };
 		0E5045DB2AAD185B00838435 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		0E5045DD2AAD265E00838435 /* librust_ios.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = librust_ios.a; path = "rust-ios/libs/librust_ios.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E5045DE2AAD268200838435 /* librust_ios.a in Frameworks */,
 				0E5045D22AAD028B00838435 /* DittoObjC in Frameworks */,
 				0E5045D42AAD028B00838435 /* DittoSwift in Frameworks */,
 			);
@@ -54,6 +57,7 @@
 				0E5045DB2AAD185B00838435 /* Config.xcconfig */,
 				0E5045BA2AACFE7100838435 /* ios-local-internet-archive */,
 				0E5045B92AACFE7100838435 /* Products */,
+				0E5045DC2AAD265E00838435 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,6 +92,14 @@
 				0E5045C22AACFE7200838435 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0E5045DC2AAD265E00838435 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0E5045DD2AAD265E00838435 /* librust_ios.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,12 +312,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ios-local-internet-archive/Preview Content\"";
-				DEVELOPMENT_TEAM = 5TA98LZXU7;
+				DEVELOPMENT_TEAM = PSXUQ4V6VZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "/Users/logankeenan/Developer/local-internet-archive/ios-local-internet-archive/rust-ios/include/rust-ios.h";
 				INFOPLIST_FILE = "ios-local-internet-archive/Info.plist";
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Uses Bluetooth to connect and sync with nearby devices\nUses Bluetooth to connect and sync with nearby devices\nUses Bluetooth to connect and sync with nearby devices\nUses Bluetooth to connect and sync with nearby devices\nUses Bluetooth to connect and sync with nearby devices\nUses Bluetooth to connect and sync with nearby devices\nUses Bluetooth to connect and sync with nearby devices\nUses Bluetooth to connect and sync with nearby devices\nUses Bluetooth to connect and sync with nearby devices\nUses Bluetooth to connect and sync with nearby devices\n";
 				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "Uses Bluetooth to connect and sync with nearby devices\nUses Bluetooth to connect and sync with nearby devices\nUses Bluetooth to connect and sync with nearby devices\nUses Bluetooth to connect and sync with nearby devices\nUses Bluetooth to connect and sync with nearby devices\n";
@@ -319,10 +333,16 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/rust-ios/libs",
+				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "logankeenan.ios-local-internet-archive";
+				PRODUCT_BUNDLE_IDENTIFIER = "lk.ios-local-internet-archive";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/logankeenan/Developer/local-internet-archive/ios-local-internet-archive/rust-ios/include/rust-ios.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -340,6 +360,7 @@
 				DEVELOPMENT_TEAM = 5TA98LZXU7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "/Users/logankeenan/Developer/local-internet-archive/ios-local-internet-archive/rust-ios/include/rust-ios.h";
 				INFOPLIST_FILE = "ios-local-internet-archive/Info.plist";
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Uses Bluetooth to connect and sync with nearby devices\nUses Bluetooth to connect and sync with nearby devices\nUses Bluetooth to connect and sync with nearby devices\nUses Bluetooth to connect and sync with nearby devices\nUses Bluetooth to connect and sync with nearby devices\nUses Bluetooth to connect and sync with nearby devices\nUses Bluetooth to connect and sync with nearby devices\nUses Bluetooth to connect and sync with nearby devices\nUses Bluetooth to connect and sync with nearby devices\nUses Bluetooth to connect and sync with nearby devices\n";
 				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "Uses Bluetooth to connect and sync with nearby devices\nUses Bluetooth to connect and sync with nearby devices\nUses Bluetooth to connect and sync with nearby devices\nUses Bluetooth to connect and sync with nearby devices\nUses Bluetooth to connect and sync with nearby devices\n";
@@ -353,10 +374,15 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/rust-ios/libs",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "logankeenan.ios-local-internet-archive";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/logankeenan/Developer/local-internet-archive/ios-local-internet-archive/rust-ios/include/rust-ios.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
