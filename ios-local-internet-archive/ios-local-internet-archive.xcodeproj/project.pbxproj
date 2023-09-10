@@ -11,7 +11,6 @@
 		0E5045BE2AACFE7100838435 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5045BD2AACFE7100838435 /* ContentView.swift */; };
 		0E5045C02AACFE7200838435 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E5045BF2AACFE7200838435 /* Assets.xcassets */; };
 		0E5045C32AACFE7200838435 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E5045C22AACFE7200838435 /* Preview Assets.xcassets */; };
-		0E5045C52AACFE7200838435 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5045C42AACFE7200838435 /* Persistence.swift */; };
 		0E5045C82AACFE7200838435 /* ios_local_internet_archive.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0E5045C62AACFE7200838435 /* ios_local_internet_archive.xcdatamodeld */; };
 		0E5045CF2AACFEBC00838435 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5045CE2AACFEBC00838435 /* DetailsView.swift */; };
 		0E5045D22AAD028B00838435 /* DittoObjC in Frameworks */ = {isa = PBXBuildFile; productRef = 0E5045D12AAD028B00838435 /* DittoObjC */; };
@@ -27,7 +26,6 @@
 		0E5045BD2AACFE7100838435 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0E5045BF2AACFE7200838435 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E5045C22AACFE7200838435 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		0E5045C42AACFE7200838435 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		0E5045C72AACFE7200838435 /* ios_local_internet_archive.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ios_local_internet_archive.xcdatamodel; sourceTree = "<group>"; };
 		0E5045CE2AACFEBC00838435 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		0E5045D52AAD031B00838435 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -76,7 +74,6 @@
 				0E5045BB2AACFE7100838435 /* ios_local_internet_archiveApp.swift */,
 				0E5045BD2AACFE7100838435 /* ContentView.swift */,
 				0E5045BF2AACFE7200838435 /* Assets.xcassets */,
-				0E5045C42AACFE7200838435 /* Persistence.swift */,
 				0E5045C62AACFE7200838435 /* ios_local_internet_archive.xcdatamodeld */,
 				0E5045C12AACFE7200838435 /* Preview Content */,
 				0E5045CE2AACFEBC00838435 /* DetailsView.swift */,
@@ -179,7 +176,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E5045C52AACFE7200838435 /* Persistence.swift in Sources */,
 				0E5045CF2AACFEBC00838435 /* DetailsView.swift in Sources */,
 				0E5045C82AACFE7200838435 /* ios_local_internet_archive.xcdatamodeld in Sources */,
 				0E5045D92AAD0E2900838435 /* ArchiveViewModel.swift in Sources */,

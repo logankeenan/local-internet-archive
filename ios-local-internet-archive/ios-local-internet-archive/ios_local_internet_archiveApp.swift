@@ -10,7 +10,6 @@ import DittoSwift
 
 @main
 struct ios_local_internet_archiveApp: App {
-    let persistenceController = PersistenceController.shared
     let ditto: Ditto
     
     @State var isPresentingAlert = false
