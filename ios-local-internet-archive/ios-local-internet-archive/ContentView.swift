@@ -93,6 +93,6 @@ struct ContentView: View {
             }
             .padding()
         }
-        .navigationTitle("Archives")
+        .navigationTitle("Local Internet Archive")
     }
 }
